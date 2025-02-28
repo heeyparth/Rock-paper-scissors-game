@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    background-color: #081b31;
+    color: white;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.choice {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #081b31;
+    transform: scale(1.1);
+}
+
+img {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    gap: 5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+#user-score, #computer-score {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.message-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+#message {
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 5rem;
+    transition: opacity 0.3s;
+}
+
+#message:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .choices {
+        gap: 2rem;
+    }
+
+    .choice {
+        width: 120px;
+        height: 120px;
+    }
+
+    img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .score-board {
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #user-score, #computer-score {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .choices {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .score-board {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #user-score, #computer-score {
+        font-size: 2.5rem;
+    }
+
+    #message {
+        font-size: 1.5rem;
+    }
+}
